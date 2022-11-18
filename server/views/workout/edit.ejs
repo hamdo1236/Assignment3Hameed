@@ -1,0 +1,66 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+ <!-- Content for the Edit page -->
+ <div class="container">
+    <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+        <h1><%= title %></h1>
+        <form class="form" method="post">
+            <div class="form-group">
+                <label for="nameTextField">Workout Name</label>
+                <input type="text" class="form-control" 
+                id="nameTextField" 
+                placeholder="Enter the Workout name" 
+                name="name" 
+                value="<%= workout.name %>"
+                required>
+            </div>
+
+            <div class="form-group">
+                <label for="targetTextField">Target</label>
+                <input type="text" class="form-control" 
+                id="targetTextField" 
+                placeholder="Enter the Target Muscle" 
+                name="target" 
+                value="<%= workout.target %>"
+                required>
+            </div>
+
+            <div class="form-group">
+                <label for="weightTextField">Weight</label>
+                <input type="text" class="form-control" 
+                id="weightTextField" 
+                placeholder="How much weight?" 
+                name="weight" 
+                value="<%= workout.weight %>"
+                required>
+            </div>
+
+            <div class="form-group">
+                <label for="repsTextField">Reps</label>
+                <input type="text" class="form-control" 
+                id="repsTextField" 
+                placeholder="Enter the number of reps" 
+                name="reps" 
+                value="<%= workout.reps %>"
+                required>
+            </div>
+            
+            <br>
+            <button class="btn-btn-primary" type="submit">
+                <i class="fas fa-edit"></i> Submit 
+            </button>
+
+            <a href="/workoutList" class="btn btn-warning">
+                <i class="fas fa-undo"> Cancel </i>
+            </a>
+
+        </form>
+        <br>
+    </div>
+    </div>
+ </div>
+
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>

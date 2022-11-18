@@ -1,0 +1,18 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+<main>
+<% if (title  == "HomePage") { %>
+          <%- include main/home.ejs %>
+   <%}%>
+
+   <%if (title == "Home") {%>
+           <%- include main/home.ejs %>
+   <% } %>
+
+   
+
+   %>
+</main>
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>
