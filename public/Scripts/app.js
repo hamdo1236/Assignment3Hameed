@@ -1,6 +1,6 @@
 (function(){
     function Start()
-    {
+    { /* "Are you sure" button asking the user if they want to confirm the deletion of the workout */
         console.log("App Started");
         let deleteButtons = document.querySelectorAll('.btn-danger');
     for(button of deleteButtons)

@@ -11,5 +11,6 @@ let workoutTrain = mongoose.Schema({
     }
 );
 
+/* Schema for the database */
 module.exports = mongoose.model('workouts', workoutTrain);
 

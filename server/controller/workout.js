@@ -10,6 +10,7 @@ let Workout = require('../models/workouts');
 
 /* CRUD Operartion*/
 
+/* READ Operartion*/
 module.exports.displayworkoutList = (req,res,next)=>{
     Workout.find((err, workoutlist)=>{
         if(err)
@@ -27,10 +28,11 @@ module.exports.displayworkoutList = (req,res,next)=>{
     });
 }
 
+/* CREATE Display Operartion*/
 module.exports.displayAddPage = (req,res,next)=>{
     res.render('workout/add',{title:'Add Workout'})
 }
-
+/* CREATE Process Operartion*/
 module.exports.processAddPage = (req,res,next)=>{
     let newWorkout = Workout ({
         "name":req.body.name,
@@ -51,6 +53,7 @@ module.exports.processAddPage = (req,res,next)=>{
     });
 }
 
+/* UPDATE Display Operartion*/
 module.exports.displayEditPage = (req,res,next)=>{
     let id = req.params.id;
     Workout.findById(id,(err,workoutToEdit)=>{
@@ -65,7 +68,7 @@ module.exports.displayEditPage = (req,res,next)=>{
         }
     });
 }
-
+/* UPDATE Process Operartion*/
 module.exports.processEditPage = (req,res,next)=>{
     let id = req.params.id;
     let updateWorkout = Workout({
@@ -87,7 +90,7 @@ module.exports.processEditPage = (req,res,next)=>{
         }
     });
 }
-
+/* DELETE Operartion*/
 module.exports.performDelete = (req,res,next)=>{
     let id = req.params.id;
     Workout.deleteOne({_id:id},(err) => {

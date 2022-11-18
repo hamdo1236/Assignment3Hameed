@@ -7,6 +7,7 @@
     <div class="col-md-offset-3 col-md-6">
         <h1><%= title %></h1>
         <form class="form" method="post">
+            <!-- Content Field for Name -->
             <div class="form-group">
                 <label for="nameTextField">Workout Name</label>
                 <input type="text" class="form-control" 
@@ -16,7 +17,7 @@
                 value="<%= workout.name %>"
                 required>
             </div>
-
+            <!-- Content Field for Target -->
             <div class="form-group">
                 <label for="targetTextField">Target</label>
                 <input type="text" class="form-control" 
@@ -26,7 +27,7 @@
                 value="<%= workout.target %>"
                 required>
             </div>
-
+            <!-- Content Field for Weight -->
             <div class="form-group">
                 <label for="weightTextField">Weight</label>
                 <input type="text" class="form-control" 
@@ -36,7 +37,7 @@
                 value="<%= workout.weight %>"
                 required>
             </div>
-
+            <!-- Content Field for Reps -->
             <div class="form-group">
                 <label for="repsTextField">Reps</label>
                 <input type="text" class="form-control" 
@@ -48,10 +49,11 @@
             </div>
             
             <br>
+            <!-- Button to Submit New Database Item -->
             <button class="btn-btn-primary" type="submit">
                 <i class="fas fa-edit"></i> Submit 
             </button>
-
+            <!-- Button to Submit New Database Item -->
             <a href="/workoutList" class="btn btn-warning">
                 <i class="fas fa-undo"> Cancel </i>
             </a>
