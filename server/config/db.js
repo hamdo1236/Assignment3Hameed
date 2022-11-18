@@ -1,4 +1,4 @@
 module.exports = 
 {
-    URI: "mongodb://127.0.0.1:27017/workoutApp"
+    URI: "mongodb+srv://hamdo1236:password@cluster0.x7avuok.mongodb.net/workoutApp"
 }
