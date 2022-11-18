@@ -22,9 +22,9 @@ module.exports.displayworkoutList = (req,res,next)=>{
             res.render('workout/list',{
                 title:"Workouts", 
                 workoutList: workoutlist
-            })
+            });
         }
-    })
+    });
 }
 
 module.exports.displayAddPage = (req,res,next)=>{
@@ -48,7 +48,7 @@ module.exports.processAddPage = (req,res,next)=>{
         {
             res.redirect('/workoutList');
         }
-    })
+    });
 }
 
 module.exports.displayEditPage = (req,res,next)=>{
@@ -100,5 +100,5 @@ module.exports.performDelete = (req,res,next)=>{
         {
             res.redirect('/workoutList');
         }
-    })
+    });
 }
